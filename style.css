@@ -13,8 +13,6 @@
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --icon-whatsapp: yellow;
-  --background-icon-whatsapp: black;
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
@@ -25,11 +23,8 @@
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --icon-whatsapp: white;
-  --background-icon-whatsapp: white;
   --switch-bg-url: url(./assets/sun.svg);
 }
-
 body {
   background: var(--bg-url) no-repeat top center/cover;
 }
@@ -81,11 +76,12 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  transition: all 0.5s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  /* right: 0; */
+  left: calc(64px - 32px);
 }
 
 #switch span {
@@ -170,12 +166,4 @@ footer p {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
-}
-
-.icon-whatsapp {
-  color: var(--icon-whatsapp);
-}
-
-.icon-whatsapp {
-  background-color: var(--background-icon-whatsapp);
 }
